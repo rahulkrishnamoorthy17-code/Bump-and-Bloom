@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html data-theme="light" dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Bump &amp; Bloom — premium baby care, maternity comforts and thoughtful gift sets." name="description"/>
+<title>Products | Bump &amp; Bloom</title>
+<link href="assets/icons/favicon.png" rel="icon"/>
+<link href="assets/icons/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<link href="assets/css/refinement.css" rel="stylesheet"/><link href="assets/css/premium-update.css" rel="stylesheet"/><link href="assets/css/grand-alignment.css" rel="stylesheet"/><link href="assets/css/site-improvements.css" rel="stylesheet"/><link href="assets/css/final-qa.css" rel="stylesheet"/>
+<script defer="" src="assets/js/data.js"></script>
+<script defer="" src="assets/js/site.js"></script>
+</head>
+<body class="page-tint" data-page="products">
+<div id="siteHeader"></div>
+<main><section class="hero hero--inner"><div class="hero-shell"><div class="hero-grid"><div class="hero-copy"><span class="eyebrow">Products</span><h1>Curated baby care essentials</h1><p class="lead">Browse everyday newborn, feeding, bath, travel, nursery and learning picks styled in the same premium boutique mood.</p><div class="button-row"><a class="btn btn-primary" href="#collection">Shop the collection →</a><a class="btn btn-outline" href="gift-sets.html">Explore gift sets</a></div></div><div class="hero-visual"><img alt="Pastel feeding set on a warm nursery tabletop" src="assets/images/product-feeding.webp"/></div></div></div></section><section class="section shop-categories" id="shop-by-category">
+<div class="container">
+<div class="section-head center"><span class="eyebrow">Explore by need</span><h2>Little essentials, thoughtfully grouped</h2><p>Find ideas for everyday routines, first adventures, and nursery moments. Browse by category, then narrow down the pieces you like.</p></div>
+<div class="shop-category-grid">
+<a class="shop-cat" href="products.html?category=Newborn%20Essentials"><span class="shop-cat-icon">◌</span><strong>Newborn essentials</strong><small>Swaddles &amp; first layers</small></a>
+<a class="shop-cat" href="products.html?category=Feeding%20%26%20Nursing"><span class="shop-cat-icon">♡</span><strong>Feeding &amp; nursing</strong><small>Meal time routines</small></a>
+<a class="shop-cat" href="products.html?category=Bath%20%26%20Skincare"><span class="shop-cat-icon">✳</span><strong>Bath &amp; care</strong><small>Gentle everyday ritual</small></a>
+<a class="shop-cat" href="products.html?category=Nursery%20%26%20Bedding"><span class="shop-cat-icon">⌂</span><strong>Nursery &amp; bedding</strong><small>Room inspiration</small></a>
+<a class="shop-cat" href="products.html?category=Toys%20%26%20Learning"><span class="shop-cat-icon">✿</span><strong>Toys &amp; learning</strong><small>Discover &amp; play</small></a>
+<a class="shop-cat" href="products.html?category=Maternity%20Comforts"><span class="shop-cat-icon">☼</span><strong>Maternity comforts</strong><small>Support for mom</small></a>
+</div>
+</div>
+</section><section class="section shop-collection-section" id="collection">
+<div class="container">
+<div class="section-head center"><span class="eyebrow">The complete collection</span><h2>Find something lovely for every stage</h2><p>Search and compare our illustrative catalogue. Check specific product suitability and manufacturer information before any real purchase.</p></div>
+<div class="shop-main-layout">
+<aside aria-label="Product filters" class="shop-sidebar card">
+<div class="sidebar-heading"><div><span class="eyebrow">Refine</span><h3>Filter collection</h3></div><button class="reset-link" id="resetFilters" type="button">Reset all</button></div>
+<div class="filter-group"><label for="productSearch">Search the store</label><div class="shop-search-wrap"><span aria-hidden="true">⌕</span><input autocomplete="off" class="input" id="productSearch" placeholder="Try swaddle, bunny, feeding..." type="search"/></div></div>
+<div class="filter-group"><div class="filter-label-row"><label id="categoryLabel">Product category</label><span class="filter-caption">Choose any</span></div><div aria-labelledby="categoryLabel" class="check-grid shop-checks" id="categoryChecks"></div></div>
+<div class="filter-group"><label for="maxPrice">Maximum budget</label><div class="price-range-label"><span>Up to</span><strong id="priceValue">₹6,500</strong></div><input id="maxPrice" max="6500" min="900" step="100" type="range" value="6500"/><div class="range-endpoints"><span>₹900</span><span>₹6,500</span></div></div>
+<div class="filter-assist"><span aria-hidden="true">✦</span><p>Not sure what to pick? Send an enquiry with a product reference and what stage you're shopping for.</p><a class="text-link" href="contact.html">Ask for guidance →</a></div>
+</aside>
+<div class="shop-results">
+<div class="shop-toolbar card"><div class="shop-result-copy"><span class="eyebrow">Bump &amp; Bloom favourites</span><h3>Explore all essentials</h3><p aria-live="polite" id="productCount">Loading the collection…</p></div><div class="shop-sort"><label for="sortProducts">Sort collection</label><select class="select" id="sortProducts"><option value="featured">Featured first</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name: A to Z</option></select></div></div>
+<div aria-live="polite" class="shop-active-filters" id="activeFilters"></div>
+<div class="catalog-grid shop-grid" id="productGrid"></div>
+<div class="shop-footnote"><span aria-hidden="true">ⓘ</span> Product photographs and prices are illustrative. Details, availability, materials and age suitability require seller verification.</div>
+</div>
+</div>
+</div>
+</section><section class="section shop-editorial-section"><div class="container shop-editorial-grid">
+<div class="shop-editorial-photo"><img alt="Soft maternity-inspired garment photograph" loading="lazy" src="assets/images/product-maternity.webp"/></div>
+<div class="shop-editorial-copy"><span class="eyebrow">A little care in every choice</span><h2>Comfort for the baby. Consideration for the parent.</h2><p>Newborn shopping is easier when each item has a clear purpose. Start with useful basics, compare materials and sizes, then add a thoughtful gift or one special piece.</p>
+<div class="editorial-point"><span>01</span><div><strong>Start with everyday routines</strong><p>Consider feeding, changing, bathing and travel needs before adding decorative extras.</p></div></div>
+<div class="editorial-point"><span>02</span><div><strong>Check care and fit</strong><p>Review garment size, cleaning instructions and product specifications for your situation.</p></div></div>
+<div class="editorial-point"><span>03</span><div><strong>Keep baby safety central</strong><p>Follow relevant age guidance and safe-sleep recommendations, especially with bedding and soft toys.</p></div></div>
+<div class="button-row"><a class="btn btn-primary" href="gift-sets.html">Browse thoughtful gifts →</a><a class="btn btn-outline" href="blog.html">Read the care journal</a></div></div>
+</div></section><section class="section shop-stage-section"><div class="container"><div class="section-head center"><span class="eyebrow">Shopping made simple</span><h2>Choose a moment to shop for</h2><p>From preparing a nursery to celebrating a new arrival, there is a thoughtful starting point for every occasion.</p></div><div class="shop-stage-grid">
+<article class="stage-card"><span class="stage-num">01 / NEW ARRIVAL</span><h3>First days at home</h3><p>Start with soft, practical essentials and build a compact everyday routine.</p><a class="text-link" href="products.html?category=Newborn%20Essentials">Newborn collection →</a></article>
+<article class="stage-card"><span class="stage-num">02 / LITTLE ROUTINES</span><h3>Feeding and growing</h3><p>Find feeding accessories and care pieces that suit the current development stage.</p><a class="text-link" href="products.html?category=Feeding%20%26%20Nursing">Feeding edit →</a></article>
+<article class="stage-card"><span class="stage-num">03 / A THOUGHTFUL GIFT</span><h3>Celebrate the moment</h3><p>Explore coordinated gift hampers for showers, arrivals and postpartum care.</p><a class="text-link" href="gift-sets.html">Shop gift sets →</a></article>
+</div></div></section></main>
+<div id="siteFooter"></div>
+<div class="sticky-cta-mobile"><a class="btn btn-outline" href="contact.html">Contact</a><a class="btn btn-primary" href="products.html">Shop Now</a></div>
+</body>
+</html>

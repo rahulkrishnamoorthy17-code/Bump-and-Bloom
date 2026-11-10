@@ -1,0 +1,92 @@
+/* Bump & Bloom — testing-team fixes and cross-project regression guards */
+[hidden]{display:none!important}
+/* Home 1 featured heading: centered across the full content width, not offset toward the product grid. */
+.featured-intro,.section-head.center.featured-intro{width:min(100% - 2 * var(--page-gutter),860px)!important;max-width:860px!important;margin:0 auto clamp(22px,3vw,38px)!important;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center!important;}
+.featured-intro .eyebrow,.featured-intro h2,.featured-intro p{width:100%;text-align:center!important;justify-content:center!important;margin-inline:auto!important}
+/* Reviews use distinct original illustrative collection photos, not invented reviewer headshots. */
+.testimonial-card{padding:0!important;display:flex!important;flex-direction:column!important;align-items:stretch!important;overflow:hidden;min-width:0;height:100%}
+.review-photo{margin:0;position:relative;height:164px;overflow:hidden;background:var(--surface-2)}
+.review-photo img{width:100%;height:100%;object-fit:cover;object-position:center 56%;display:block;transition:transform .45s ease}
+.testimonial-card:hover .review-photo img{transform:scale(1.035)}
+.review-photo figcaption{position:absolute;inset-inline-end:12px;bottom:10px;padding:4px 9px;border-radius:999px;background:rgba(255,251,247,.94);font-size:.64rem;letter-spacing:.01em;font-weight:700;color:#314654}
+.testimonial-card>.stars{padding:23px 24px 0!important;margin-bottom:10px!important}
+.testimonial-card>blockquote{padding:0 24px;margin:0 0 18px!important;min-height:150px;flex:1!important}
+.testimonial-card>.review-signature{margin-top:auto;padding:0 24px 24px}
+/* Interactive heart/favourites */
+.product-thumb{position:relative}
+.badge-heart.wishlist-toggle{position:absolute;z-index:4;inset-block-start:14px;inset-inline-end:14px;width:40px;height:40px;border-radius:50%;border:1px solid var(--border);background:var(--surface);color:var(--accent);display:grid;place-items:center;font-size:1.45rem;font-family:Arial,sans-serif;line-height:1;cursor:pointer;box-shadow:0 4px 14px rgba(26,32,39,.1);transition:background .25s ease,color .25s ease,transform .25s ease;}
+.badge-heart.wishlist-toggle:hover{transform:scale(1.11)!important}
+.badge-heart.wishlist-toggle.is-saved,.wishlist-toggle[aria-pressed="true"]{background:#8a314f;color:white;border-color:#8a314f}
+html[data-theme="dark"] .badge-heart.wishlist-toggle{background:var(--surface);color:var(--accent)}
+html[data-theme="dark"] .badge-heart.wishlist-toggle.is-saved{background:#ba637d;color:#fff}
+.gift-card{position:relative}
+.wishlist-nav-link{position:relative}
+.wishlist-hero{background:var(--bg-soft)}
+.wishlist-heading{font-size:clamp(1.45rem,2.3vw,2rem)}
+.wishlist-toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:25px}
+.wishlist-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:stretch}
+.wishlist-grid>.empty-state{grid-column:1/-1;padding:45px 24px}
+.empty-heart{display:block;font-size:3rem;color:var(--primary);margin-bottom:10px}
+.wishlist-grid .product-card{height:100%}
+.wishlist-grid .gift-card{min-width:0}
+/* Better alignment for product and journal cards. */
+.product-card .product-body{display:flex;flex-direction:column;flex:1}
+.product-card .price-row{margin-top:auto}
+.article-grid{align-items:stretch}
+.article-card{display:flex;flex-direction:column;min-width:0;height:100%}
+.article-card .card-body{display:flex;flex-direction:column;flex:1}
+.article-card .card-body p{min-height:3.2em}
+.article-card .text-link{margin-top:auto;align-self:center}
+.blog-results{min-width:0}
+.blog-results-toolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+.blog-results-toolbar p{margin:0}
+.filter-reset{border:0;background:none;cursor:pointer;padding:8px 6px;font-size:.89rem}
+/* Working checkout preview; ensure hidden state wins over section CSS */
+#checkoutPreview[hidden]{display:none!important}
+.cart-preview{padding:clamp(22px,4.6vw,43px);max-width:850px;margin-inline:auto;display:flex;flex-direction:column;gap:10px}
+.cart-preview h2{font-size:clamp(1.65rem,3vw,2.5rem)}
+.preview-items{display:grid;gap:0;margin-top:15px;border:1px solid var(--border);border-radius:18px;overflow:hidden}
+.preview-line{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:14px 17px;border-bottom:1px solid var(--border);background:var(--surface)}
+.preview-line:last-child{border-bottom:0}
+.preview-line small{color:var(--muted);white-space:nowrap}
+.preview-grand-total{border-top:2px solid var(--border);padding-top:16px;display:flex;gap:15px;justify-content:space-between;font-size:1.16rem;color:var(--text)}
+.checkout-actions{align-items:center}
+#cartStatus{min-height:2.5em;margin:0}
+/* Footer: social platforms in branded visual style, authentic links, no claimed official accounts. */
+.footer-social{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;align-items:center}
+.footer-social a{width:42px;height:42px;border-radius:50%;border:1px solid var(--border);background:var(--bg-soft);color:var(--primary);display:grid;place-items:center;transition:background .25s ease,transform .25s ease,color .25s ease}
+.footer-social a:hover{background:var(--primary);color:white;transform:translateY(-3px)}
+.footer-social svg{width:19px;height:19px;stroke:currentColor}
+.site-footer .footer-social-note{font-size:.7rem;line-height:1.5;max-width:34ch;margin-top:10px;color:var(--muted)}
+/* Regression checks: dropdowns, content padding, headings, accessibility, footer gap */
+select.select{appearance:none;-webkit-appearance:none;padding-inline:16px 46px;min-height:48px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23365e71' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-size:18px;background-position:right 16px center;background-repeat:no-repeat}
+html[data-theme='dark'] select.select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d3e9ec' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")}
+html[dir='rtl'] select.select{background-position:left 16px center;padding-inline:46px 16px}
+.section-head h2,.section-head h3{font-style:normal}
+.site-footer{margin-top:0!important}
+main{min-width:0}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(max-width:1300px){.wishlist-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1024px){.wishlist-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.testimonial-card>blockquote{min-height:0}}
+@media(max-width:768px){.testimonials-section .testimonial-grid{grid-template-columns:1fr!important;max-width:540px!important;margin-inline:auto}.testimonial-card>blockquote{min-height:0}.review-photo{height:190px}.wishlist-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:530px){.wishlist-grid{grid-template-columns:1fr}.wishlist-toolbar{flex-direction:column;align-items:stretch}.wishlist-toolbar .btn{align-self:flex-start}.preview-line{align-items:flex-start}.review-photo{height:165px}}
+@media(prefers-reduced-motion:reduce){.review-photo img,.footer-social a,.wishlist-toggle{transition:none!important}}
+/* Navbar space regression: avoid overlap after adding wishlist link. */
+@media(min-width:1121px) and (max-width:1390px){.nav-actions .nav-cta{display:none!important}.site-nav a,.site-nav .dropdown-trigger{padding-inline:9px!important;font-size:.88rem!important}}
+@media(max-width:480px){.nav-actions .wishlist-nav-link,.nav-actions a[aria-label="Shopping bag"]{display:none!important}}
+
+.site-footer .footer-location{display:flex;align-items:center;gap:7px;margin-top:10px;font-size:.76rem;color:var(--muted)}
+.site-footer .footer-location svg{flex:none;color:var(--primary)}
+
+
+/* testimonial avatar + footer address patch */
+.review-avatar{width:52px;height:52px;flex:none;border-radius:50%;object-fit:cover;display:block;border:2px solid color-mix(in srgb,var(--surface) 55%,var(--border));box-shadow:0 8px 20px rgba(33,42,52,.10)}
+.review-signature{gap:14px;align-items:center}
+.review-signature>div{min-width:0}
+.review-signature strong{font-size:1.05rem}
+.footer-address{margin-top:14px;padding:14px 16px;border:1px solid var(--border);border-radius:18px;background:color-mix(in srgb,var(--surface-2) 70%,transparent);display:grid;gap:8px;max-width:320px}
+.footer-address-head{display:flex;align-items:center;gap:8px;color:var(--text)}
+.footer-address-head svg{color:var(--primary);flex:none}
+.footer-address strong{font-size:.95rem;font-weight:800}
+.footer-address p{margin:0;color:var(--muted);font-size:.88rem;line-height:1.6}
+@media(max-width:768px){.footer-address{max-width:none}.review-avatar{width:48px;height:48px}}
